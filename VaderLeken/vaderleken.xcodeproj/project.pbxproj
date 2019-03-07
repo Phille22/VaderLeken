@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		552C36FD2231139D0005F3E0 /* EasyGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552C36FC2231139D0005F3E0 /* EasyGameViewController.swift */; };
+		55629EC92230071100E48733 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55629EC82230071100E48733 /* AppDelegate.swift */; };
+		55629ECB2230071100E48733 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55629ECA2230071100E48733 /* StartViewController.swift */; };
+		55629ECE2230071100E48733 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55629ECC2230071100E48733 /* Main.storyboard */; };
+		55629ED02230071200E48733 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55629ECF2230071200E48733 /* Assets.xcassets */; };
+		55629ED32230071200E48733 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55629ED12230071200E48733 /* LaunchScreen.storyboard */; };
+		55629EDE2230071200E48733 /* VaderLekenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55629EDD2230071200E48733 /* VaderLekenTests.swift */; };
+		55629EE92230071200E48733 /* VaderLekenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55629EE82230071200E48733 /* VaderLekenUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		55629EDA2230071200E48733 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55629EBD2230071100E48733 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55629EC42230071100E48733;
+			remoteInfo = VaderLeken;
+		};
+		55629EE52230071200E48733 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55629EBD2230071100E48733 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55629EC42230071100E48733;
+			remoteInfo = VaderLeken;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		552C36FC2231139D0005F3E0 /* EasyGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyGameViewController.swift; sourceTree = "<group>"; };
+		55629EC52230071100E48733 /* VaderLeken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VaderLeken.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55629EC82230071100E48733 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		55629ECA2230071100E48733 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		55629ECD2230071100E48733 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55629ECF2230071200E48733 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55629ED22230071200E48733 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		55629ED42230071200E48733 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55629ED92230071200E48733 /* VaderLekenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VaderLekenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55629EDD2230071200E48733 /* VaderLekenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaderLekenTests.swift; sourceTree = "<group>"; };
+		55629EDF2230071200E48733 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55629EE42230071200E48733 /* VaderLekenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VaderLekenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55629EE82230071200E48733 /* VaderLekenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaderLekenUITests.swift; sourceTree = "<group>"; };
+		55629EEA2230071200E48733 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55629EC22230071100E48733 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55629ED62230071200E48733 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55629EE12230071200E48733 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		55629EBC2230071100E48733 = {
+			isa = PBXGroup;
+			children = (
+				55629EC72230071100E48733 /* VaderLeken */,
+				55629EDC2230071200E48733 /* VaderLekenTests */,
+				55629EE72230071200E48733 /* VaderLekenUITests */,
+				55629EC62230071100E48733 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		55629EC62230071100E48733 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55629EC52230071100E48733 /* VaderLeken.app */,
+				55629ED92230071200E48733 /* VaderLekenTests.xctest */,
+				55629EE42230071200E48733 /* VaderLekenUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55629EC72230071100E48733 /* VaderLeken */ = {
+			isa = PBXGroup;
+			children = (
+				55629EC82230071100E48733 /* AppDelegate.swift */,
+				55629ECA2230071100E48733 /* StartViewController.swift */,
+				552C36FC2231139D0005F3E0 /* EasyGameViewController.swift */,
+				55629ECC2230071100E48733 /* Main.storyboard */,
+				55629ECF2230071200E48733 /* Assets.xcassets */,
+				55629ED12230071200E48733 /* LaunchScreen.storyboard */,
+				55629ED42230071200E48733 /* Info.plist */,
+			);
+			path = VaderLeken;
+			sourceTree = "<group>";
+		};
+		55629EDC2230071200E48733 /* VaderLekenTests */ = {
+			isa = PBXGroup;
+			children = (
+				55629EDD2230071200E48733 /* VaderLekenTests.swift */,
+				55629EDF2230071200E48733 /* Info.plist */,
+			);
+			path = VaderLekenTests;
+			sourceTree = "<group>";
+		};
+		55629EE72230071200E48733 /* VaderLekenUITests */ = {
+			isa = PBXGroup;
+			children = (
+				55629EE82230071200E48733 /* VaderLekenUITests.swift */,
+				55629EEA2230071200E48733 /* Info.plist */,
+			);
+			path = VaderLekenUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55629EC42230071100E48733 /* VaderLeken */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55629EED2230071200E48733 /* Build configuration list for PBXNativeTarget "VaderLeken" */;
+			buildPhases = (
+				55629EC12230071100E48733 /* Sources */,
+				55629EC22230071100E48733 /* Frameworks */,
+				55629EC32230071100E48733 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VaderLeken;
+			productName = VaderLeken;
+			productReference = 55629EC52230071100E48733 /* VaderLeken.app */;
+			productType = "com.apple.product-type.application";
+		};
+		55629ED82230071200E48733 /* VaderLekenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55629EF02230071200E48733 /* Build configuration list for PBXNativeTarget "VaderLekenTests" */;
+			buildPhases = (
+				55629ED52230071200E48733 /* Sources */,
+				55629ED62230071200E48733 /* Frameworks */,
+				55629ED72230071200E48733 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55629EDB2230071200E48733 /* PBXTargetDependency */,
+			);
+			name = VaderLekenTests;
+			productName = VaderLekenTests;
+			productReference = 55629ED92230071200E48733 /* VaderLekenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		55629EE32230071200E48733 /* VaderLekenUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55629EF32230071200E48733 /* Build configuration list for PBXNativeTarget "VaderLekenUITests" */;
+			buildPhases = (
+				55629EE02230071200E48733 /* Sources */,
+				55629EE12230071200E48733 /* Frameworks */,
+				55629EE22230071200E48733 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55629EE62230071200E48733 /* PBXTargetDependency */,
+			);
+			name = VaderLekenUITests;
+			productName = VaderLekenUITests;
+			productReference = 55629EE42230071200E48733 /* VaderLekenUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55629EBD2230071100E48733 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = STI;
+				TargetAttributes = {
+					55629EC42230071100E48733 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					55629ED82230071200E48733 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 55629EC42230071100E48733;
+					};
+					55629EE32230071200E48733 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 55629EC42230071100E48733;
+					};
+				};
+			};
+			buildConfigurationList = 55629EC02230071100E48733 /* Build configuration list for PBXProject "VaderLeken" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 55629EBC2230071100E48733;
+			productRefGroup = 55629EC62230071100E48733 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55629EC42230071100E48733 /* VaderLeken */,
+				55629ED82230071200E48733 /* VaderLekenTests */,
+				55629EE32230071200E48733 /* VaderLekenUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55629EC32230071100E48733 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55629ED32230071200E48733 /* LaunchScreen.storyboard in Resources */,
+				55629ED02230071200E48733 /* Assets.xcassets in Resources */,
+				55629ECE2230071100E48733 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55629ED72230071200E48733 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55629EE22230071200E48733 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55629EC12230071100E48733 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				552C36FD2231139D0005F3E0 /* EasyGameViewController.swift in Sources */,
+				55629ECB2230071100E48733 /* StartViewController.swift in Sources */,
+				55629EC92230071100E48733 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55629ED52230071200E48733 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55629EDE2230071200E48733 /* VaderLekenTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55629EE02230071200E48733 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55629EE92230071200E48733 /* VaderLekenUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55629EDB2230071200E48733 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55629EC42230071100E48733 /* VaderLeken */;
+			targetProxy = 55629EDA2230071200E48733 /* PBXContainerItemProxy */;
+		};
+		55629EE62230071200E48733 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55629EC42230071100E48733 /* VaderLeken */;
+			targetProxy = 55629EE52230071200E48733 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		55629ECC2230071100E48733 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55629ECD2230071100E48733 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		55629ED12230071200E48733 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55629ED22230071200E48733 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		55629EEB2230071200E48733 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		55629EEC2230071200E48733 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55629EEE2230071200E48733 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VaderLeken/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = STI.VaderLeken;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		55629EEF2230071200E48733 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VaderLeken/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = STI.VaderLeken;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		55629EF12230071200E48733 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VaderLekenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = STI.VaderLekenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VaderLeken.app/VaderLeken";
+			};
+			name = Debug;
+		};
+		55629EF22230071200E48733 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VaderLekenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = STI.VaderLekenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VaderLeken.app/VaderLeken";
+			};
+			name = Release;
+		};
+		55629EF42230071200E48733 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VaderLekenUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = STI.VaderLekenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VaderLeken;
+			};
+			name = Debug;
+		};
+		55629EF52230071200E48733 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VaderLekenUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = STI.VaderLekenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VaderLeken;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55629EC02230071100E48733 /* Build configuration list for PBXProject "VaderLeken" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55629EEB2230071200E48733 /* Debug */,
+				55629EEC2230071200E48733 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55629EED2230071200E48733 /* Build configuration list for PBXNativeTarget "VaderLeken" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55629EEE2230071200E48733 /* Debug */,
+				55629EEF2230071200E48733 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55629EF02230071200E48733 /* Build configuration list for PBXNativeTarget "VaderLekenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55629EF12230071200E48733 /* Debug */,
+				55629EF22230071200E48733 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55629EF32230071200E48733 /* Build configuration list for PBXNativeTarget "VaderLekenUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55629EF42230071200E48733 /* Debug */,
+				55629EF52230071200E48733 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55629EBD2230071100E48733 /* Project object */;
+}
