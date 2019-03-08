@@ -41,9 +41,6 @@ struct Values: Decodable{
 
 
 class EasyGameViewController: UIViewController {
-    let lat = Double.random(in: 55.354135...68.815927)
-    let long = Double.random(in: 12.801269...23.941405)
-    let initialLocation = CLLocation(latitude: 58.99451, longitude: 17.99205)
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var CurrentTempButton: UIButton!
     
@@ -55,35 +52,36 @@ class EasyGameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let location = randomLocation()
-        getWeather(latitude: location.0, longitude: location.1){ (theData) in self.showWeather(with: theData)
-       }
-        displayMap(latitude: location.0, longitude: location.1, location: initialLocation)
-        print(location.0)
-        print(location.1)
+        getWeather(latitude: location.1, longitude: location.2){ (theData) in
+            let temperatures = self.getTemperature(with: theData)
+            self.showTemperature(realTemp: temperatures.0, randNumber: temperatures.1, randNumber2: temperatures.2)
+        }
+        displayMap(latitude: location.1, longitude: location.2, location: location.0)
         // Do any additional setup after loading the view.
     }
     
     @IBAction func RealTempPress(_ sender: Any) {
         let location = randomLocation()
-        getWeather(latitude: location.0, longitude: location.1){ (theData) in self.showWeather(with: theData)
+        getWeather(latitude: location.1, longitude: location.2){ (theData) in
+            let temperatures = self.getTemperature(with: theData)
+            self.showTemperature(realTemp: temperatures.0, randNumber: temperatures.1, randNumber2: temperatures.2)
         }
-        displayMap(latitude: location.0, longitude: location.1, location: initialLocation)
-        print(location.0)
-        print(location.1)
-        
+        displayMap(latitude: location.1, longitude: location.2, location: location.0)
     }
     
-    func randomLocation() -> (Double, Double){
+    
+    //Välj en slumpmässig plats på kartan
+    func randomLocation() -> (CLLocation, Double, Double){
         let lat2 = Double.random(in: 55.354135...68.815927)
         let long2 = Double.random(in: 12.801269...23.941405)
-        return (lat2, long2)
+        let initialLocation = CLLocation(latitude: lat2, longitude: long2)
+        return (initialLocation, lat2, long2)
     }
+    
     //Hämta väderdata
     func getWeather(latitude: Double, longitude: Double, completion: @escaping (ForecastResponse) -> Void){
         let latRound = Double(round(1000 * latitude)/1000)
         let longRound = Double(round(1000 * longitude)/1000)
-        print(latRound)
-        print(longRound)
         //let jsonUrlString = "https://opendata-download-metobs.smhi.se/api/version/latest/parameter/1/station/97400/period/latest-hour/data.json"
         let jsonUrlString = "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/\(longRound)/lat/\(latRound)/data.json"
         guard let url = URL(string: jsonUrlString) else { return }
@@ -104,30 +102,37 @@ class EasyGameViewController: UIViewController {
             }.resume()
     }
     
-    //Visa temperaturen
-    func showWeather(with responseData: ForecastResponse){
+    //Hämta temperaturdata
+    func getTemperature(with responseData: ForecastResponse) -> (Double, Double, Double){
         let realTemp = responseData.timeSeries[1].parameters[11].values[0]
-        let randNumber = Double.random(in: -20...realTemp)
-        let randNumber2 = Double.random(in: -20...realTemp)
+        print(realTemp)
+        let randNumber = Double.random(in: (realTemp-10.0)...(realTemp+10.0))
+        let randNumber2 = Double.random(in: (realTemp-10.0)...(realTemp+10.0))
+        print(randNumber)
+        print(randNumber2)
+       return(realTemp, randNumber, randNumber2)
+    }
+    
+    //Visa temperaturen på knapparna
+    func showTemperature(realTemp: Double, randNumber: Double, randNumber2: Double){
         DispatchQueue.main.async {
-            //self.StationLabel.text = responseData.station.name
-            self.CurrentTempButton.titleLabel?.text = String(realTemp)
-            self.FalseTempButton.titleLabel?.text = String(randNumber)
-            self.FalseTempButton2.titleLabel?.text = String(randNumber2)
+           // self.CurrentTempButton.titleLabel?.text = String(realTemp)
+           // self.FalseTempButton.titleLabel?.text = String(randNumber)
+           // self.FalseTempButton2.titleLabel?.text = String(randNumber2)
+            self.CurrentTempButton.setTitle(String(realTemp), for: .normal)
+            self.FalseTempButton.setTitle(String(randNumber), for: .normal)
+            self.FalseTempButton2.setTitle(String(randNumber2), for: .normal)
         }
     }
     
     //Kartan
     func displayMap(latitude: Double, longitude: Double, location: CLLocation){
-        print(latitude)
-        print(longitude)
-        let regionRadius: CLLocationDistance = 1000000
+        let regionRadius: CLLocationDistance = 500000
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
         mapView.setRegion(coordinateRegion, animated: true)
         let place = MKPointAnnotation()
         place.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         mapView.addAnnotation(place)
-        print(place.coordinate)
         
         //Hämta adress från koordinater
         let geoCoder = CLGeocoder()
@@ -138,7 +143,7 @@ class EasyGameViewController: UIViewController {
                 
                 guard let placeMark = placemarks?.first else {return}
                 
-                if let city = placeMark.subAdministrativeArea{
+                if let city = placeMark.locality{
                     self.StationLabel.text = city
                 }
             
