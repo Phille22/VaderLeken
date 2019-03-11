@@ -86,9 +86,18 @@ class EasyGameViewController: UIViewController {
         //Debug
         print(answerList)
         print(cityList)
-    }
-        
+        }else{
+            performSegue(withIdentifier: "EndGame", sender: self)
+        }
 }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "EndGame"{
+            let endView = segue.destination as! EndViewController
+            endView.answers = answerList
+        }
+    }
+    
+    
     //Action för andra knappen
     @IBAction func TempButton2Press(_ sender: Any) {
         if numberOfAnswers <= 4{
