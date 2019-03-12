@@ -100,7 +100,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3QF-eH-ygh">
-                                <rect key="frame" x="23" y="109" width="343" height="605"/>
+                                <rect key="frame" x="16" y="132" width="343" height="605"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -111,8 +111,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="99.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mp4-Pr-f0U">
-                                                    <rect key="frame" x="150" y="11" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mp4-Pr-f0U">
+                                                    <rect key="frame" x="25" y="11" width="255" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -150,6 +150,8 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="AnswerLabel" destination="SwJ-GJ-awE" id="bwz-Oi-5cq"/>
+                                            <outlet property="CityLabel" destination="Mp4-Pr-f0U" id="82T-JF-OYS"/>
+                                            <outlet property="RightTempLabel" destination="5OU-K9-X1A" id="K0w-x3-C3g"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -158,11 +160,19 @@
                                     <outlet property="delegate" destination="kUp-2s-bn0" id="KV0-40-W4O"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0e-ah-ETu">
+                                <rect key="frame" x="16" y="84" width="343" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="FUk-NF-Ncd"/>
                     </view>
                     <connections>
+                        <outlet property="CorrectAnswersLabel" destination="T0e-ah-ETu" id="MgV-sv-USG"/>
                         <outlet property="tableView" destination="3QF-eH-ygh" id="naT-Rd-Qht"/>
                     </connections>
                 </viewController>

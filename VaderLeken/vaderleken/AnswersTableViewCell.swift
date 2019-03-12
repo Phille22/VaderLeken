@@ -11,8 +11,13 @@ import UIKit
 class AnswersTableViewCell: UITableViewCell {
     
     @IBOutlet weak var AnswerLabel: UILabel!
-    func displayAnswers(answers: String){
+    @IBOutlet weak var CityLabel: UILabel!
+    @IBOutlet weak var RightTempLabel: UILabel!
+    
+    func displayAnswers(answers: String, cities: String, rightTemps: Double){
         AnswerLabel.text = answers
+        CityLabel.text = cities
+        RightTempLabel.text = String(rightTemps)
     }
     
 }

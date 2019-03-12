@@ -64,16 +64,13 @@ class EasyGameViewController: UIViewController {
         displayMap(latitude: location.1, longitude: location.2, location: location.0)
         // Do any additional setup after loading the view.
     }
-    
     //Action för första knappen
     @IBAction func TempButton1Press(_ sender: Any) {
         if numberOfAnswers <= 4{
-            
         if TempButton1.titleLabel?.text == String(tempList[0]){
            rightAnswer += 1
             print(rightAnswer)
         }
-            
         numberOfAnswers += 1
         answerList.append((TempButton1.titleLabel?.text)!)
         tempList.removeAll()
@@ -86,18 +83,11 @@ class EasyGameViewController: UIViewController {
         //Debug
         print(answerList)
         print(cityList)
-        }else{
-            performSegue(withIdentifier: "EndGame", sender: self)
-        }
-}
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "EndGame"{
-            let endView = segue.destination as! EndViewController
-            endView.answers = answerList
+            if numberOfAnswers == 5{
+                performSegue(withIdentifier: "EndGame", sender: self)
+            }
         }
     }
-    
-    
     //Action för andra knappen
     @IBAction func TempButton2Press(_ sender: Any) {
         if numberOfAnswers <= 4{
@@ -119,18 +109,18 @@ class EasyGameViewController: UIViewController {
         //Debug
         print(answerList)
         print(cityList)
+            if numberOfAnswers == 5{
+                performSegue(withIdentifier: "EndGame", sender: self)
+            }
         }
     }
-    
     //Action för tredje knappen
     @IBAction func TempButton3Press(_ sender: Any) {
         if numberOfAnswers <= 4{
-        
         if TempButton3.titleLabel?.text == String(tempList[0]){
             rightAnswer += 1
             print(rightAnswer)
         }
-            
         numberOfAnswers += 1
         answerList.append((TempButton3.titleLabel?.text)!)
         tempList.removeAll()
@@ -143,17 +133,27 @@ class EasyGameViewController: UIViewController {
         //Debug
         print(answerList)
         print(cityList)
+            if numberOfAnswers == 5{
+                performSegue(withIdentifier: "EndGame", sender: self)
+            }
         }
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "EndGame"{
+            let endView = segue.destination as! EndViewController
+            endView.answers = answerList
+            endView.cities = cityList
+            endView.rightTemps = rightTempList
+            endView.correctAnswers = rightAnswer
+        }
+    }
     //Välj en slumpmässig plats på kartan
     func randomLocation() -> (CLLocation, Double, Double){
-        let lat2 = Double.random(in: 55.354135...68.815927)
-        let long2 = Double.random(in: 12.801269...23.941405)
+        let lat2 = Double.random(in: 57.354135...65.815927)
+        let long2 = Double.random(in: 13.801269...15.371093)
         let initialLocation = CLLocation(latitude: lat2, longitude: long2)
         return (initialLocation, lat2, long2)
     }
-    
     //Hämta väderdata
     func getWeather(latitude: Double, longitude: Double, completion: @escaping (ForecastResponse) -> Void){
         let latRound = Double(round(1000 * latitude)/1000)
@@ -177,7 +177,6 @@ class EasyGameViewController: UIViewController {
             }
             }.resume()
     }
-    
     //Hämta temperaturdata
     func getTemperature(with responseData: ForecastResponse) -> (Double, Double, Double){
         let realTemp = responseData.timeSeries[1].parameters[11].values[0]
