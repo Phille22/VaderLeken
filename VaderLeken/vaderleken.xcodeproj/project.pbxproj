@@ -10,6 +10,7 @@
 		552C36FD2231139D0005F3E0 /* EasyGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552C36FC2231139D0005F3E0 /* EasyGameViewController.swift */; };
 		55312A7E223698DD00BAF4C8 /* EndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55312A7D223698DD00BAF4C8 /* EndViewController.swift */; };
 		55312A8022369E8B00BAF4C8 /* AnswersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55312A7F22369E8B00BAF4C8 /* AnswersTableViewCell.swift */; };
+		5542875A22394735007D5BF6 /* DifficultyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5542875922394735007D5BF6 /* DifficultyViewController.swift */; };
 		55629EC92230071100E48733 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55629EC82230071100E48733 /* AppDelegate.swift */; };
 		55629ECB2230071100E48733 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55629ECA2230071100E48733 /* StartViewController.swift */; };
 		55629ECE2230071100E48733 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55629ECC2230071100E48733 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		552C36FC2231139D0005F3E0 /* EasyGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyGameViewController.swift; sourceTree = "<group>"; };
 		55312A7D223698DD00BAF4C8 /* EndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndViewController.swift; sourceTree = "<group>"; };
 		55312A7F22369E8B00BAF4C8 /* AnswersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersTableViewCell.swift; sourceTree = "<group>"; };
+		5542875922394735007D5BF6 /* DifficultyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyViewController.swift; sourceTree = "<group>"; };
 		55629EC52230071100E48733 /* VaderLeken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VaderLeken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55629EC82230071100E48733 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55629ECA2230071100E48733 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -105,13 +107,14 @@
 			children = (
 				55629EC82230071100E48733 /* AppDelegate.swift */,
 				55629ECA2230071100E48733 /* StartViewController.swift */,
+				5542875922394735007D5BF6 /* DifficultyViewController.swift */,
 				552C36FC2231139D0005F3E0 /* EasyGameViewController.swift */,
 				55312A7D223698DD00BAF4C8 /* EndViewController.swift */,
+				55312A7F22369E8B00BAF4C8 /* AnswersTableViewCell.swift */,
 				55629ECC2230071100E48733 /* Main.storyboard */,
 				55629ECF2230071200E48733 /* Assets.xcassets */,
 				55629ED12230071200E48733 /* LaunchScreen.storyboard */,
 				55629ED42230071200E48733 /* Info.plist */,
-				55312A7F22369E8B00BAF4C8 /* AnswersTableViewCell.swift */,
 			);
 			path = VaderLeken;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55312A7E223698DD00BAF4C8 /* EndViewController.swift in Sources */,
+				5542875A22394735007D5BF6 /* DifficultyViewController.swift in Sources */,
 				55312A8022369E8B00BAF4C8 /* AnswersTableViewCell.swift in Sources */,
 				552C36FD2231139D0005F3E0 /* EasyGameViewController.swift in Sources */,
 				55629ECB2230071100E48733 /* StartViewController.swift in Sources */,

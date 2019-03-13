@@ -22,7 +22,6 @@ class EndViewController: UIViewController {
         super.viewDidLoad()
         CorrectAnswersLabel.text = "\(correctAnswers ?? 0) Av 5"
     }
-
 }
 
 extension EndViewController: UITableViewDataSource, UITableViewDelegate{
@@ -36,6 +35,12 @@ extension EndViewController: UITableViewDataSource, UITableViewDelegate{
         let rightTemp = rightTemps?[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "AnswersTableViewCell") as! AnswersTableViewCell
         cell.displayAnswers(answers: answer ?? "Ingen data", cities: city ?? "Ingen data", rightTemps: Double(rightTemp ?? 0))
+        if (answer == "\(rightTemp ?? 0)"){
+            cell.backgroundColor = UIColor.green
+        }else{
+           cell.backgroundColor = UIColor.red
+        }
+        
         return cell
     }
 }

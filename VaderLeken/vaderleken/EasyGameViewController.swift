@@ -47,6 +47,7 @@ class EasyGameViewController: UIViewController {
     var answerList: [String] = []
     var cityList: [String] = []
     var rightTempList: [Double] = []
+    var easyOrHard: Bool?
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var TempButton1: UIButton!
@@ -56,6 +57,11 @@ class EasyGameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if easyOrHard == false{
+            TempButton1.isHidden = true
+            TempButton2.isHidden = true
+            TempButton3.isHidden = true
+        }
         let location = randomLocation()
         getWeather(latitude: location.1, longitude: location.2){ (theData) in
             let temperatures = self.getTemperature(with: theData)
@@ -138,6 +144,7 @@ class EasyGameViewController: UIViewController {
             }
         }
     }
+    //Skicka data till skärm med sammanfattning
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "EndGame"{
             let endView = segue.destination as! EndViewController
@@ -147,6 +154,7 @@ class EasyGameViewController: UIViewController {
             endView.correctAnswers = rightAnswer
         }
     }
+    
     //Välj en slumpmässig plats på kartan
     func randomLocation() -> (CLLocation, Double, Double){
         let lat2 = Double.random(in: 57.354135...65.815927)
