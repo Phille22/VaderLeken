@@ -219,11 +219,19 @@
                                     <action selector="TempButton1Press:" destination="nlY-IR-XTO" eventType="touchUpInside" id="DZA-Hk-NBF"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QQV-H8-bbg">
+                                <rect key="frame" x="134" y="171" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="bZD-vq-Hos"/>
                     </view>
                     <connections>
+                        <outlet property="AnswerTextField" destination="QQV-H8-bbg" id="pwA-bS-bOV"/>
                         <outlet property="StationLabel" destination="8jd-uN-Auk" id="H3Z-u6-y9w"/>
                         <outlet property="TempButton1" destination="lop-Ie-P8N" id="N60-Fo-RBF"/>
                         <outlet property="TempButton2" destination="ueJ-Mz-D4A" id="EM9-Rz-4VL"/>
@@ -234,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FhQ-5k-8uI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1338" y="23"/>
+            <point key="canvasLocation" x="1346" y="38"/>
         </scene>
         <!--End View Controller-->
         <scene sceneID="iQj-4q-GAa">

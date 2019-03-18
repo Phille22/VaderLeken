@@ -54,12 +54,13 @@ class EasyGameViewController: UIViewController {
     @IBOutlet weak var TempButton2: UIButton!
     @IBOutlet weak var TempButton3: UIButton!
     @IBOutlet weak var StationLabel: UILabel!
+    @IBOutlet weak var AnswerTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if easyOrHard == false{
             TempButton1.isHidden = true
-            TempButton2.isHidden = true
+            //TempButton2.isHidden = true
             TempButton3.isHidden = true
         }
         let location = randomLocation()
@@ -97,14 +98,21 @@ class EasyGameViewController: UIViewController {
     //Action för andra knappen
     @IBAction func TempButton2Press(_ sender: Any) {
         if numberOfAnswers <= 4{
-        
-        if TempButton2.titleLabel?.text == String(tempList[0]){
-            rightAnswer += 1
-            print(rightAnswer)
-        }
-            
+            //Om man spelar på svår svårighetsgrad
+            if easyOrHard == false{
+                if AnswerTextField.text == String(tempList[0]){
+                    rightAnswer += 1
+                }
+                answerList.append((AnswerTextField?.text)!)
+                AnswerTextField.text = ""
+            }else{
+                if TempButton2.titleLabel?.text == String(tempList[0]){
+                    rightAnswer += 1
+                    print(rightAnswer)
+                }
+                answerList.append((TempButton2.titleLabel?.text)!)
+            }
         numberOfAnswers += 1
-        answerList.append((TempButton2.titleLabel?.text)!)
         tempList.removeAll()
         let location = randomLocation()
         getWeather(latitude: location.1, longitude: location.2){ (theData) in
@@ -187,7 +195,7 @@ class EasyGameViewController: UIViewController {
     }
     //Hämta temperaturdata
     func getTemperature(with responseData: ForecastResponse) -> (Double, Double, Double){
-        let realTemp = responseData.timeSeries[1].parameters[11].values[0]
+        let realTemp = responseData.timeSeries[1].parameters[1].values[0]
         print(realTemp)
         let randNumber = Double.random(in: (realTemp-10.0)...(realTemp+10.0)).rounded()
         let randNumber2 = Double.random(in: (realTemp-10.0)...(realTemp+10.0)).rounded()
@@ -202,7 +210,11 @@ class EasyGameViewController: UIViewController {
             var temporaryList = [realTemp, randNumber, randNumber2]
             temporaryList.shuffle()
             self.TempButton1.setTitle(String(temporaryList[0]), for: .normal)
-            self.TempButton2.setTitle(String(temporaryList[1]), for: .normal)
+            if self.easyOrHard == false{
+                self.TempButton2.setTitle("Ok", for: .normal)
+            }else{
+                self.TempButton2.setTitle(String(temporaryList[1]), for: .normal)
+            }
             self.TempButton3.setTitle(String(temporaryList[2]), for: .normal)
             temporaryList.removeAll()
         }

@@ -1,4 +1,4 @@
-//
+ //
 //  EndViewController.swift
 //  VaderLeken
 //
@@ -16,7 +16,6 @@ class EndViewController: UIViewController {
     var cities: [String]?
     var rightTemps: [Double]?
     var correctAnswers: Int?
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +39,6 @@ extension EndViewController: UITableViewDataSource, UITableViewDelegate{
         }else{
            cell.backgroundColor = UIColor.red
         }
-        
         return cell
     }
 }
