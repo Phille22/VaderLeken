@@ -9,22 +9,9 @@
 import UIKit
 import MapKit
 
-struct WeatherResponse: Decodable{
-    let value: [Value]
-    let station: Station
-}
-
 struct ForecastResponse: Decodable{
     let timeSeries: [TimeSeries]
     
-}
-
-struct Value: Decodable{
-    let value: String
-}
-
-struct Station: Decodable{
-    let name: String
 }
 
 struct TimeSeries: Decodable{
@@ -60,7 +47,6 @@ class EasyGameViewController: UIViewController {
         super.viewDidLoad()
         if easyOrHard == false{
             TempButton1.isHidden = true
-            //TempButton2.isHidden = true
             TempButton3.isHidden = true
         }
         let location = randomLocation()
@@ -69,7 +55,6 @@ class EasyGameViewController: UIViewController {
             self.showTemperature(realTemp: temperatures.0, randNumber: temperatures.1, randNumber2: temperatures.2)
         }
         displayMap(latitude: location.1, longitude: location.2, location: location.0)
-        // Do any additional setup after loading the view.
     }
     //Action för första knappen
     @IBAction func TempButton1Press(_ sender: Any) {
@@ -81,15 +66,7 @@ class EasyGameViewController: UIViewController {
         numberOfAnswers += 1
         answerList.append((TempButton1.titleLabel?.text)!)
         tempList.removeAll()
-        let location = randomLocation()
-        getWeather(latitude: location.1, longitude: location.2){ (theData) in
-            let temperatures = self.getTemperature(with: theData)
-            self.showTemperature(realTemp: temperatures.0, randNumber: temperatures.1, randNumber2: temperatures.2)
-        }
-        displayMap(latitude: location.1, longitude: location.2, location: location.0)
-        //Debug
-        print(answerList)
-        print(cityList)
+        viewDidLoad()
             if numberOfAnswers == 5{
                 performSegue(withIdentifier: "EndGame", sender: self)
             }
@@ -114,15 +91,7 @@ class EasyGameViewController: UIViewController {
             }
         numberOfAnswers += 1
         tempList.removeAll()
-        let location = randomLocation()
-        getWeather(latitude: location.1, longitude: location.2){ (theData) in
-            let temperatures = self.getTemperature(with: theData)
-            self.showTemperature(realTemp: temperatures.0, randNumber: temperatures.1, randNumber2: temperatures.2)
-        }
-        displayMap(latitude: location.1, longitude: location.2, location: location.0)
-        //Debug
-        print(answerList)
-        print(cityList)
+        viewDidLoad()
             if numberOfAnswers == 5{
                 performSegue(withIdentifier: "EndGame", sender: self)
             }
@@ -138,15 +107,7 @@ class EasyGameViewController: UIViewController {
         numberOfAnswers += 1
         answerList.append((TempButton3.titleLabel?.text)!)
         tempList.removeAll()
-        let location = randomLocation()
-        getWeather(latitude: location.1, longitude: location.2){ (theData) in
-            let temperatures = self.getTemperature(with: theData)
-            self.showTemperature(realTemp: temperatures.0, randNumber: temperatures.1, randNumber2: temperatures.2)
-        }
-        displayMap(latitude: location.1, longitude: location.2, location: location.0)
-        //Debug
-        print(answerList)
-        print(cityList)
+        viewDidLoad()
             if numberOfAnswers == 5{
                 performSegue(withIdentifier: "EndGame", sender: self)
             }
@@ -195,7 +156,7 @@ class EasyGameViewController: UIViewController {
     }
     //Hämta temperaturdata
     func getTemperature(with responseData: ForecastResponse) -> (Double, Double, Double){
-        let realTemp = responseData.timeSeries[1].parameters[1].values[0]
+        let realTemp = responseData.timeSeries[1].parameters[11].values[0]
         print(realTemp)
         let randNumber = Double.random(in: (realTemp-10.0)...(realTemp+10.0)).rounded()
         let randNumber2 = Double.random(in: (realTemp-10.0)...(realTemp+10.0)).rounded()
@@ -208,10 +169,10 @@ class EasyGameViewController: UIViewController {
     func showTemperature(realTemp: Double, randNumber: Double, randNumber2: Double){
         DispatchQueue.main.async {
             var temporaryList = [realTemp, randNumber, randNumber2]
-            temporaryList.shuffle()
+            temporaryList.shuffle() //Slumpmässig ordning på knapparna
             self.TempButton1.setTitle(String(temporaryList[0]), for: .normal)
             if self.easyOrHard == false{
-                self.TempButton2.setTitle("Ok", for: .normal)
+                self.TempButton2.setTitle("Ok", for: .normal) //Gör om knappen till en Ok-knapp om svårt spel spelas
             }else{
                 self.TempButton2.setTitle(String(temporaryList[1]), for: .normal)
             }
