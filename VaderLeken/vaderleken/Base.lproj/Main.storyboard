@@ -47,6 +47,14 @@
                                     <segue destination="8LT-L0-NdQ" kind="show" id="sIt-B5-Qd5"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DA6-Fg-e3H">
+                                <rect key="frame" x="156" y="483" width="63" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Topplista"/>
+                                <connections>
+                                    <segue destination="n2O-np-TYf" kind="show" id="jv9-el-nyf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -109,7 +117,8 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quS-Wo-fsk">
                                 <rect key="frame" x="107" y="270" width="154" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Massimo Catarinella</string>
+                                <string key="text">Massimo Catarinella
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -166,6 +175,67 @@
                 <exit id="ZPF-tM-jDn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-95.200000000000003" y="723.39901477832518"/>
+        </scene>
+        <!--Score Board View Controller-->
+        <scene sceneID="D44-DZ-VZS">
+            <objects>
+                <viewController id="n2O-np-TYf" customClass="ScoreBoardViewController" customModule="VaderLeken" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0bo-W8-5Br">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4cb-zC-cUd">
+                                <rect key="frame" x="0.0" y="83" width="375" height="268"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ScoreBoardTableViewCell" id="naR-os-e2d" customClass="ScoreBoardTableViewCell" customModule="VaderLeken" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="naR-os-e2d" id="Y0K-P9-dC8">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAp-L4-zNY">
+                                                    <rect key="frame" x="166" y="11" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ScoreLabel" destination="PAp-L4-zNY" id="mQB-X4-Bc6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="n2O-np-TYf" id="UMN-OM-iOT"/>
+                                    <outlet property="delegate" destination="n2O-np-TYf" id="ZEY-RH-vM3"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wh-Lz-T5Y">
+                                <rect key="frame" x="146" y="430" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Huvudmeny"/>
+                                <connections>
+                                    <segue destination="sVE-fM-PjX" kind="unwind" unwindAction="backToMainMenuWithUnwindSegue:" id="PQc-Ku-Mkb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="P9M-DR-UUk"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="4cb-zC-cUd" id="xVa-q8-OId"/>
+                        <segue destination="kUp-2s-bn0" kind="show" identifier="showResult" id="4h1-kv-gOC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I5z-w9-Pwi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="sVE-fM-PjX" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="956" y="771"/>
         </scene>
         <!--Difficulty View Controller-->
         <scene sceneID="f6s-MW-EhA">
@@ -409,4 +479,7 @@
     <resources>
         <image name="RainAmsterdamTheNetherlands" width="1266" height="841"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="4h1-kv-gOC"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import CoreData
 
 struct ForecastResponse: Decodable{
     let timeSeries: [TimeSeries]
@@ -121,8 +122,31 @@ class EasyGameViewController: UIViewController {
             endView.cities = cityList
             endView.rightTemps = rightTempList
             endView.correctAnswers = rightAnswer
+            
+            //Spara datan
+            if let appDelegate = (UIApplication.shared.delegate as? AppDelegate){
+                let saveData = SaveDataCoreData(context: appDelegate.persistentContainer.viewContext)
+                saveData.correctAnswers = Int16(rightAnswer)
+                saveData.answer = answerList[0]
+                saveData.answer2 = answerList[1]
+                saveData.answer3 = answerList[2]
+                saveData.answer4 = answerList[3]
+                saveData.answer5 = answerList[4]
+                saveData.city = cityList[0]
+                saveData.city2 = cityList[1]
+                saveData.city3 = cityList[2]
+                saveData.city4 = cityList[3]
+                saveData.city5 = cityList[4]
+                saveData.rightTemp = rightTempList[0]
+                saveData.rightTemp2 = rightTempList[1]
+                saveData.rightTemp3 = rightTempList[2]
+                saveData.rightTemp4 = rightTempList[3]
+                saveData.rightTemp5 = rightTempList[4]
+                appDelegate.saveContext()
+            }
+            }
         }
-    }
+    
     
     //Välj en slumpmässig plats på kartan
     func randomLocation() -> (CLLocation, Double, Double){

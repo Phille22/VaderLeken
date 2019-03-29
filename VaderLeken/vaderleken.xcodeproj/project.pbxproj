@@ -18,6 +18,9 @@
 		55629ED32230071200E48733 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55629ED12230071200E48733 /* LaunchScreen.storyboard */; };
 		55629EDE2230071200E48733 /* VaderLekenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55629EDD2230071200E48733 /* VaderLekenTests.swift */; };
 		55629EE92230071200E48733 /* VaderLekenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55629EE82230071200E48733 /* VaderLekenUITests.swift */; };
+		559A8D58224E0FD8000F5DE3 /* VaderLeken.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 559A8D56224E0FD8000F5DE3 /* VaderLeken.xcdatamodeld */; };
+		559A8D5A224E2753000F5DE3 /* ScoreBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559A8D59224E2753000F5DE3 /* ScoreBoardViewController.swift */; };
+		559A8D5C224E2AD3000F5DE3 /* ScoreBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559A8D5B224E2AD3000F5DE3 /* ScoreBoardTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		55629EE42230071200E48733 /* VaderLekenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VaderLekenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55629EE82230071200E48733 /* VaderLekenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaderLekenUITests.swift; sourceTree = "<group>"; };
 		55629EEA2230071200E48733 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		559A8D57224E0FD8000F5DE3 /* VaderLeken.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VaderLeken.xcdatamodel; sourceTree = "<group>"; };
+		559A8D59224E2753000F5DE3 /* ScoreBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardViewController.swift; sourceTree = "<group>"; };
+		559A8D5B224E2AD3000F5DE3 /* ScoreBoardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,10 +117,13 @@
 				552C36FC2231139D0005F3E0 /* EasyGameViewController.swift */,
 				55312A7D223698DD00BAF4C8 /* EndViewController.swift */,
 				55312A7F22369E8B00BAF4C8 /* AnswersTableViewCell.swift */,
+				559A8D5B224E2AD3000F5DE3 /* ScoreBoardTableViewCell.swift */,
 				55629ECC2230071100E48733 /* Main.storyboard */,
 				55629ECF2230071200E48733 /* Assets.xcassets */,
 				55629ED12230071200E48733 /* LaunchScreen.storyboard */,
 				55629ED42230071200E48733 /* Info.plist */,
+				559A8D56224E0FD8000F5DE3 /* VaderLeken.xcdatamodeld */,
+				559A8D59224E2753000F5DE3 /* ScoreBoardViewController.swift */,
 			);
 			path = VaderLeken;
 			sourceTree = "<group>";
@@ -272,8 +281,11 @@
 				5542875A22394735007D5BF6 /* DifficultyViewController.swift in Sources */,
 				55312A8022369E8B00BAF4C8 /* AnswersTableViewCell.swift in Sources */,
 				552C36FD2231139D0005F3E0 /* EasyGameViewController.swift in Sources */,
+				559A8D5A224E2753000F5DE3 /* ScoreBoardViewController.swift in Sources */,
 				55629ECB2230071100E48733 /* StartViewController.swift in Sources */,
+				559A8D58224E0FD8000F5DE3 /* VaderLeken.xcdatamodeld in Sources */,
 				55629EC92230071100E48733 /* AppDelegate.swift in Sources */,
+				559A8D5C224E2AD3000F5DE3 /* ScoreBoardTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +608,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		559A8D56224E0FD8000F5DE3 /* VaderLeken.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				559A8D57224E0FD8000F5DE3 /* VaderLeken.xcdatamodel */,
+			);
+			currentVersion = 559A8D57224E0FD8000F5DE3 /* VaderLeken.xcdatamodel */;
+			path = VaderLeken.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 55629EBD2230071100E48733 /* Project object */;
 }

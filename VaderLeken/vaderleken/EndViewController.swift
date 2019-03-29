@@ -10,6 +10,7 @@ import UIKit
 
 class EndViewController: UIViewController {
     
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var CorrectAnswersLabel: UILabel!
     var answers: [String]?
