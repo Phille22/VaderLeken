@@ -11,7 +11,7 @@ import UIKit
 class ScoreBoardTableViewCell: UITableViewCell {
     @IBOutlet weak var ScoreLabel: UILabel!
     
-    func showScore(score: Int){
+    func showScore(score: Double){
         ScoreLabel.text = String(score)
     }
  

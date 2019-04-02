@@ -13,14 +13,19 @@ class EndViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var CorrectAnswersLabel: UILabel!
+    @IBOutlet weak var PointsLabel: UILabel!
+    
+    
     var answers: [String]?
     var cities: [String]?
     var rightTemps: [Double]?
     var correctAnswers: Int?
+    var points: Double?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         CorrectAnswersLabel.text = "\(correctAnswers ?? 0) Av 5"
+        PointsLabel.text = "\(points ?? 0) Poäng"
     }
 }
 

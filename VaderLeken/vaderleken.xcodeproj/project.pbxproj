@@ -118,12 +118,12 @@
 				55312A7D223698DD00BAF4C8 /* EndViewController.swift */,
 				55312A7F22369E8B00BAF4C8 /* AnswersTableViewCell.swift */,
 				559A8D5B224E2AD3000F5DE3 /* ScoreBoardTableViewCell.swift */,
+				559A8D59224E2753000F5DE3 /* ScoreBoardViewController.swift */,
 				55629ECC2230071100E48733 /* Main.storyboard */,
 				55629ECF2230071200E48733 /* Assets.xcassets */,
 				55629ED12230071200E48733 /* LaunchScreen.storyboard */,
 				55629ED42230071200E48733 /* Info.plist */,
 				559A8D56224E0FD8000F5DE3 /* VaderLeken.xcdatamodeld */,
-				559A8D59224E2753000F5DE3 /* ScoreBoardViewController.swift */,
 			);
 			path = VaderLeken;
 			sourceTree = "<group>";

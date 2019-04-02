@@ -12,6 +12,7 @@
         <attribute name="city4" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="city5" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="correctAnswers" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="points" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="rightAnswer" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="rightTemp" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="rightTemp2" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -20,6 +21,6 @@
         <attribute name="rightTemp5" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="SaveData" positionX="-63" positionY="-18" width="128" height="300"/>
+        <element name="SaveData" positionX="-63" positionY="-18" width="128" height="315"/>
     </elements>
 </model>

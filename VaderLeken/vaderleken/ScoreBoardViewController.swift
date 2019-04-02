@@ -33,6 +33,7 @@ class ScoreBoardViewController: UIViewController, NSFetchedResultsControllerDele
                     resultPage.cities = cities as? [String]
                     resultPage.rightTemps = rightTemps
                     resultPage.correctAnswers = Int(resultsArray[index].correctAnswers)
+                    resultPage.points = resultsArray[index].points
                 }
             }
         }
@@ -41,7 +42,7 @@ class ScoreBoardViewController: UIViewController, NSFetchedResultsControllerDele
     //Ladda data
     override func viewWillAppear(_ animated: Bool) {
         let fetchRequest: NSFetchRequest<SaveDataCoreData> = SaveDataCoreData.fetchRequest()
-        let sortDescriptor = NSSortDescriptor(key: "correctAnswers", ascending: true)
+        let sortDescriptor = NSSortDescriptor(key: "correctAnswers", ascending: false)
         fetchRequest.sortDescriptors = [sortDescriptor]
         
         if let appDelegate = (UIApplication.shared.delegate as? AppDelegate){
@@ -71,7 +72,7 @@ extension ScoreBoardViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let results = resultsArray[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "ScoreBoardTableViewCell") as! ScoreBoardTableViewCell
-        cell.showScore(score: Int(results.correctAnswers))
+        cell.showScore(score: Double(results.points))
         return cell
     }
     

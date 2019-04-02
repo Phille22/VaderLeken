@@ -31,6 +31,7 @@ struct Values: Decodable{
 class EasyGameViewController: UIViewController {
     var rightAnswer = 0
     var numberOfAnswers = 0
+    var points = 0.0
     var tempList: [Double] = []
     var answerList: [String] = []
     var cityList: [String] = []
@@ -62,8 +63,11 @@ class EasyGameViewController: UIViewController {
         if numberOfAnswers <= 4{
         if TempButton1.titleLabel?.text == String(tempList[0]){
            rightAnswer += 1
+            points += 100
             print(rightAnswer)
-        }
+        }else{
+            points += 50 - (tempList[0] + Double("\(TempButton1.titleLabel?.text ?? "0")")!)
+            }
         numberOfAnswers += 1
         answerList.append((TempButton1.titleLabel?.text)!)
         tempList.removeAll()
@@ -80,13 +84,19 @@ class EasyGameViewController: UIViewController {
             if easyOrHard == false{
                 if AnswerTextField.text == String(tempList[0]){
                     rightAnswer += 1
+                    points += 100
+                }else{
+                    points += 50 - (tempList[0] + Double("\(AnswerTextField.text ?? "0")")!)
                 }
                 answerList.append((AnswerTextField?.text)!)
                 AnswerTextField.text = ""
             }else{
                 if TempButton2.titleLabel?.text == String(tempList[0]){
                     rightAnswer += 1
+                    points += 100
                     print(rightAnswer)
+                }else{
+                    points += 50 - (tempList[0] + Double("\(TempButton2.titleLabel?.text ?? "0")")!)
                 }
                 answerList.append((TempButton2.titleLabel?.text)!)
             }
@@ -103,8 +113,11 @@ class EasyGameViewController: UIViewController {
         if numberOfAnswers <= 4{
         if TempButton3.titleLabel?.text == String(tempList[0]){
             rightAnswer += 1
+            points += 100
             print(rightAnswer)
-        }
+        }else{
+            points += 50 - (tempList[0] + Double("\(TempButton3.titleLabel?.text ?? "0")")!)
+            }
         numberOfAnswers += 1
         answerList.append((TempButton3.titleLabel?.text)!)
         tempList.removeAll()
@@ -122,6 +135,7 @@ class EasyGameViewController: UIViewController {
             endView.cities = cityList
             endView.rightTemps = rightTempList
             endView.correctAnswers = rightAnswer
+            endView.points = points.rounded()
             
             //Spara datan
             if let appDelegate = (UIApplication.shared.delegate as? AppDelegate){
@@ -142,6 +156,7 @@ class EasyGameViewController: UIViewController {
                 saveData.rightTemp3 = rightTempList[2]
                 saveData.rightTemp4 = rightTempList[3]
                 saveData.rightTemp5 = rightTempList[4]
+                saveData.points = points
                 appDelegate.saveContext()
             }
             }
