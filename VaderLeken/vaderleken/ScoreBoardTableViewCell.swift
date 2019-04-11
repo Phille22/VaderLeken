@@ -10,9 +10,11 @@ import UIKit
 
 class ScoreBoardTableViewCell: UITableViewCell {
     @IBOutlet weak var ScoreLabel: UILabel!
+    @IBOutlet weak var PlaceLabel: UILabel!
     
-    func showScore(score: Double){
+    func showScore(score: Double, place: Int){
         ScoreLabel.text = String(score)
+        PlaceLabel.text = String(place)
     }
  
 

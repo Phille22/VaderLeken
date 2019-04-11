@@ -71,8 +71,9 @@ extension ScoreBoardViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let results = resultsArray[indexPath.row]
+        print(results)
         let cell = tableView.dequeueReusableCell(withIdentifier: "ScoreBoardTableViewCell") as! ScoreBoardTableViewCell
-        cell.showScore(score: Double(results.points))
+        cell.showScore(score: Double(results.points), place: indexPath.row + 1)
         return cell
     }
     

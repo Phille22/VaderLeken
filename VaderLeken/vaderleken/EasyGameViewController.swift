@@ -47,6 +47,7 @@ class EasyGameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(points)
         if easyOrHard == false{
             TempButton1.isHidden = true
             TempButton3.isHidden = true
@@ -63,10 +64,10 @@ class EasyGameViewController: UIViewController {
         if numberOfAnswers <= 4{
         if TempButton1.titleLabel?.text == String(tempList[0]){
            rightAnswer += 1
-            points += 100
+            points += 100 //100 poäng för rätt svar
             print(rightAnswer)
         }else{
-            points += 50 - (tempList[0] + Double("\(TempButton1.titleLabel?.text ?? "0")")!)
+            points += 100 - (tempList[0] - Double("\(TempButton1.titleLabel?.text ?? "0")")!).magnitude
             }
         numberOfAnswers += 1
         answerList.append((TempButton1.titleLabel?.text)!)
@@ -84,9 +85,9 @@ class EasyGameViewController: UIViewController {
             if easyOrHard == false{
                 if AnswerTextField.text == String(tempList[0]){
                     rightAnswer += 1
-                    points += 100
+                    points += 200 //Dubbelt så mycket poäng för rätt svar än om man spelar på lätt svårighetsgrad
                 }else{
-                    points += 50 - (tempList[0] + Double("\(AnswerTextField.text ?? "0")")!)
+                    points += 200 - (tempList[0] - Double("\(AnswerTextField.text ?? "0")")!).magnitude
                 }
                 answerList.append((AnswerTextField?.text)!)
                 AnswerTextField.text = ""
@@ -96,7 +97,7 @@ class EasyGameViewController: UIViewController {
                     points += 100
                     print(rightAnswer)
                 }else{
-                    points += 50 - (tempList[0] + Double("\(TempButton2.titleLabel?.text ?? "0")")!)
+                    points += 100 - (tempList[0] - Double("\(TempButton2.titleLabel?.text ?? "0")")!).magnitude
                 }
                 answerList.append((TempButton2.titleLabel?.text)!)
             }
@@ -116,7 +117,7 @@ class EasyGameViewController: UIViewController {
             points += 100
             print(rightAnswer)
         }else{
-            points += 50 - (tempList[0] + Double("\(TempButton3.titleLabel?.text ?? "0")")!)
+            points += 100 - (tempList[0] - Double("\(TempButton3.titleLabel?.text ?? "0")")!).magnitude
             }
         numberOfAnswers += 1
         answerList.append((TempButton3.titleLabel?.text)!)
@@ -245,15 +246,4 @@ class EasyGameViewController: UIViewController {
             
         })
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
