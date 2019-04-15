@@ -45,12 +45,16 @@ class EasyGameViewController: UIViewController {
     @IBOutlet weak var StationLabel: UILabel!
     @IBOutlet weak var AnswerTextField: UITextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print(points)
         if easyOrHard == false{
             TempButton1.isHidden = true
             TempButton3.isHidden = true
+            AnswerTextField.becomeFirstResponder()
+        }else{
+         AnswerTextField.isHidden = true
         }
         let location = randomLocation()
         getWeather(latitude: location.1, longitude: location.2){ (theData) in

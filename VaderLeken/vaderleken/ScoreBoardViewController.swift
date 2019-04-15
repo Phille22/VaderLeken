@@ -42,7 +42,7 @@ class ScoreBoardViewController: UIViewController, NSFetchedResultsControllerDele
     //Ladda data
     override func viewWillAppear(_ animated: Bool) {
         let fetchRequest: NSFetchRequest<SaveDataCoreData> = SaveDataCoreData.fetchRequest()
-        let sortDescriptor = NSSortDescriptor(key: "correctAnswers", ascending: false)
+        let sortDescriptor = NSSortDescriptor(key: "points", ascending: false)
         fetchRequest.sortDescriptors = [sortDescriptor]
         
         if let appDelegate = (UIApplication.shared.delegate as? AppDelegate){

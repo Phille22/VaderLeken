@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="RainAmsterdamTheNetherlands" translatesAutoresizingMaskIntoConstraints="NO" id="LG1-bw-if5">
-                                <rect key="frame" x="179.66666666666669" y="0.0" width="16" height="1027"/>
+                                <rect key="frame" x="-445.66666666666669" y="0.0" width="1266.3333333333333" height="1027"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1027" id="485-Ij-8BY"/>
                                 </constraints>
@@ -84,7 +84,7 @@
         <!--About View Controller-->
         <scene sceneID="66m-Zf-H9q">
             <objects>
-                <viewController id="3Bv-x0-1my" customClass="AboutViewController" sceneMemberID="viewController">
+                <viewController id="3Bv-x0-1my" customClass="AboutViewController" customModule="VaderLeken" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iw5-VX-lZf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,15 +118,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="https://commons.wikimedia.org/wiki/File:RainAmsterdamTheNetherlands.jpg" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RZm-XH-7eS">
-                                <rect key="frame" x="15" y="223" width="343" height="53"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="TvQ-JV-zhI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Används med tillstånd enligt följande licens:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" preferredMaxLayoutWidth="333.66666666666669" translatesAutoresizingMaskIntoConstraints="NO" id="7bu-0R-Rq1">
                                 <rect key="frame" x="19" y="284" width="334" height="21"/>
                                 <constraints>
@@ -136,8 +127,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Creative Commons Attribution-Share Alike 3.0 Unported" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" preferredMaxLayoutWidth="427" translatesAutoresizingMaskIntoConstraints="NO" id="OnI-rO-8z1">
-                                <rect key="frame" x="16" y="313" width="343" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Creative Commons Attribution-Share Alike 3.0 Unported" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" preferredMaxLayoutWidth="427" translatesAutoresizingMaskIntoConstraints="NO" id="OnI-rO-8z1">
+                                <rect key="frame" x="16" y="301" width="343" height="11"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="11" id="3oI-Ep-AjJ"/>
                                 </constraints>
@@ -145,17 +136,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="https://creativecommons.org/licenses/by-sa/3.0/deed.en" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" preferredMaxLayoutWidth="430.30000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="t1u-Ip-hXq">
-                                <rect key="frame" x="12" y="337" width="348" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="814-CB-uCS"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="V 0.9 Beta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tIg-gq-WnZ">
-                                <rect key="frame" x="91" y="629" width="192" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V 0.9 Beta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tIg-gq-WnZ">
+                                <rect key="frame" x="148" y="527" width="79" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="q67-3H-dVk"/>
                                 </constraints>
@@ -164,7 +146,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phille 2019 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="RPy-Vk-A3t">
-                                <rect key="frame" x="143.66666666666666" y="581" width="88" height="20"/>
+                                <rect key="frame" x="143.66666666666666" y="592" width="88" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="ijH-pf-qnX"/>
                                 </constraints>
@@ -172,8 +154,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slX-Pe-cW6">
-                                <rect key="frame" x="107" y="718" width="165" height="20"/>
+                            <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slX-Pe-cW6">
+                                <rect key="frame" x="158" y="527" width="59" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="IX3-TV-gz8"/>
                                 </constraints>
@@ -192,8 +174,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Temperaturdata från SMHI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hwz-r5-2bb">
-                                <rect key="frame" x="85" y="465" width="202.33333333333337" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperaturdata från SMHI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hwz-r5-2bb">
+                                <rect key="frame" x="86.666666666666686" y="429" width="202" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="7jt-3k-JBG"/>
                                 </constraints>
@@ -201,41 +183,61 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekd-b3-2rM">
+                                <rect key="frame" x="19" y="352" width="340" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="https://creativecommons.org/licenses/by-sa/3.0/deed.en"/>
+                                <connections>
+                                    <action selector="LicenceLink:" destination="3Bv-x0-1my" eventType="touchUpInside" id="mvC-BQ-gRo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLg-Gw-3Z9">
+                                <rect key="frame" x="16" y="233" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="https://commons.wikimedia.org/wiki/File:RainAmsterdamTheNetherlands.jpg"/>
+                                <connections>
+                                    <action selector="imageLink:" destination="3Bv-x0-1my" eventType="touchUpInside" id="f5P-oa-5AX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="vLg-Gw-3Z9" firstAttribute="centerX" secondItem="slX-Pe-cW6" secondAttribute="centerX" id="0ft-nL-27M"/>
                             <constraint firstItem="quS-Wo-fsk" firstAttribute="centerX" secondItem="OnI-rO-8z1" secondAttribute="centerX" id="5wC-bh-UaK"/>
                             <constraint firstItem="tIg-gq-WnZ" firstAttribute="centerX" secondItem="RPy-Vk-A3t" secondAttribute="centerX" id="6To-RZ-5hb"/>
                             <constraint firstItem="ZMs-Xc-oKB" firstAttribute="top" secondItem="X39-Fq-k1i" secondAttribute="bottom" constant="24" id="9pO-al-3rk"/>
                             <constraint firstItem="tIg-gq-WnZ" firstAttribute="top" secondItem="hwz-r5-2bb" secondAttribute="bottom" constant="78" id="BnQ-sJ-L29"/>
-                            <constraint firstItem="quS-Wo-fsk" firstAttribute="centerX" secondItem="RZm-XH-7eS" secondAttribute="centerX" id="BtK-xO-3HP"/>
                             <constraint firstItem="quS-Wo-fsk" firstAttribute="top" secondItem="ZMs-Xc-oKB" secondAttribute="bottom" constant="1" id="E7y-6b-Iq3"/>
-                            <constraint firstItem="t1u-Ip-hXq" firstAttribute="leading" secondItem="nSW-T4-Jlo" secondAttribute="leading" constant="13" id="Ehq-Qd-2Ns"/>
+                            <constraint firstItem="ekd-b3-2rM" firstAttribute="centerX" secondItem="7bu-0R-Rq1" secondAttribute="centerX" id="FRU-nV-321"/>
                             <constraint firstItem="ZMs-Xc-oKB" firstAttribute="centerX" secondItem="quS-Wo-fsk" secondAttribute="centerX" id="Fu6-or-oGg"/>
-                            <constraint firstItem="7bu-0R-Rq1" firstAttribute="top" secondItem="RZm-XH-7eS" secondAttribute="bottom" constant="19" id="LgW-H9-eoh"/>
+                            <constraint firstItem="vLg-Gw-3Z9" firstAttribute="leading" secondItem="nSW-T4-Jlo" secondAttribute="leading" constant="30" id="JMT-f4-ldM"/>
                             <constraint firstItem="RPy-Vk-A3t" firstAttribute="top" secondItem="tIg-gq-WnZ" secondAttribute="bottom" constant="45" id="MD7-pA-yXM"/>
-                            <constraint firstItem="RZm-XH-7eS" firstAttribute="centerX" secondItem="hwz-r5-2bb" secondAttribute="centerX" id="Rz8-Ih-pyk"/>
-                            <constraint firstItem="t1u-Ip-hXq" firstAttribute="top" secondItem="OnI-rO-8z1" secondAttribute="bottom" constant="17" id="WhO-fL-nZx"/>
+                            <constraint firstItem="hwz-r5-2bb" firstAttribute="top" secondItem="ekd-b3-2rM" secondAttribute="bottom" constant="83" id="NFB-y8-gmU"/>
+                            <constraint firstItem="vLg-Gw-3Z9" firstAttribute="top" secondItem="quS-Wo-fsk" secondAttribute="bottom" constant="18" id="QIw-7y-o30"/>
                             <constraint firstItem="X39-Fq-k1i" firstAttribute="top" secondItem="tK3-Ao-uvV" secondAttribute="bottom" constant="8" symbolic="YES" id="Wpy-Sa-VXi"/>
                             <constraint firstItem="hwz-r5-2bb" firstAttribute="centerX" secondItem="tIg-gq-WnZ" secondAttribute="centerX" id="XEL-Sh-goG"/>
                             <constraint firstItem="tK3-Ao-uvV" firstAttribute="top" secondItem="nSW-T4-Jlo" secondAttribute="top" constant="26" id="YvO-yu-273"/>
                             <constraint firstItem="tK3-Ao-uvV" firstAttribute="centerX" secondItem="X39-Fq-k1i" secondAttribute="centerX" id="ZgB-ei-6xm"/>
                             <constraint firstItem="OnI-rO-8z1" firstAttribute="leading" secondItem="iw5-VX-lZf" secondAttribute="leadingMargin" id="a1a-1F-56H"/>
                             <constraint firstItem="OnI-rO-8z1" firstAttribute="top" secondItem="7bu-0R-Rq1" secondAttribute="bottom" constant="13" id="d9v-gZ-qCG"/>
-                            <constraint firstItem="RZm-XH-7eS" firstAttribute="trailing" secondItem="t1u-Ip-hXq" secondAttribute="trailing" constant="-3" id="fXf-Y0-KsB"/>
-                            <constraint firstItem="hwz-r5-2bb" firstAttribute="top" secondItem="t1u-Ip-hXq" secondAttribute="bottom" constant="71" id="fvg-94-bWx"/>
-                            <constraint firstItem="RZm-XH-7eS" firstAttribute="top" secondItem="quS-Wo-fsk" secondAttribute="bottom" constant="1" id="idb-my-Cuu"/>
+                            <constraint firstItem="ekd-b3-2rM" firstAttribute="top" secondItem="OnI-rO-8z1" secondAttribute="bottom" constant="8" symbolic="YES" id="g4O-1l-Fha"/>
                             <constraint firstItem="slX-Pe-cW6" firstAttribute="top" secondItem="RPy-Vk-A3t" secondAttribute="bottom" constant="25" id="kOV-cr-WXW"/>
                             <constraint firstItem="nSW-T4-Jlo" firstAttribute="trailing" secondItem="7bu-0R-Rq1" secondAttribute="trailing" constant="19" id="kmP-Qt-VAa"/>
                             <constraint firstItem="slX-Pe-cW6" firstAttribute="centerX" secondItem="tIg-gq-WnZ" secondAttribute="centerX" id="l6J-Y3-irN"/>
-                            <constraint firstItem="RZm-XH-7eS" firstAttribute="leading" secondItem="nSW-T4-Jlo" secondAttribute="leading" constant="15" id="mQb-z5-XGC"/>
                             <constraint firstItem="7bu-0R-Rq1" firstAttribute="leading" secondItem="nSW-T4-Jlo" secondAttribute="leading" constant="22" id="nU3-8C-ZTW"/>
+                            <constraint firstItem="ekd-b3-2rM" firstAttribute="leading" secondItem="iw5-VX-lZf" secondAttribute="leadingMargin" constant="-24" id="o9k-E8-6TD"/>
                             <constraint firstItem="OnI-rO-8z1" firstAttribute="trailing" secondItem="iw5-VX-lZf" secondAttribute="trailingMargin" id="s8E-dm-rl5"/>
                             <constraint firstItem="slX-Pe-cW6" firstAttribute="top" secondItem="tIg-gq-WnZ" secondAttribute="top" id="sDs-O6-XXH"/>
+                            <constraint firstItem="vLg-Gw-3Z9" firstAttribute="centerX" secondItem="X39-Fq-k1i" secondAttribute="centerX" id="tVp-8D-HOd"/>
                             <constraint firstItem="X39-Fq-k1i" firstAttribute="centerX" secondItem="quS-Wo-fsk" secondAttribute="centerX" id="uIT-Yo-WaO"/>
+                            <constraint firstItem="7bu-0R-Rq1" firstAttribute="top" secondItem="vLg-Gw-3Z9" secondAttribute="bottom" constant="21" id="zIE-qv-5ZI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nSW-T4-Jlo"/>
                     </view>
+                    <connections>
+                        <outlet property="imageLinkButton" destination="vLg-Gw-3Z9" id="XXh-JR-Xt2"/>
+                        <outlet property="licenceLinkButton" destination="ekd-b3-2rM" id="54h-5h-8me"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EZJ-Kb-VQ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ZPF-tM-jDn" userLabel="Exit" sceneMemberID="exit"/>
@@ -334,7 +336,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="RainAmsterdamTheNetherlands" translatesAutoresizingMaskIntoConstraints="NO" id="9Dn-1m-K7f">
-                                <rect key="frame" x="179.66666666666669" y="0.0" width="16" height="896"/>
+                                <rect key="frame" x="-445.66666666666669" y="0.0" width="1266.3333333333333" height="896"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1027" id="NIO-w6-dD3"/>
                                 </constraints>
@@ -444,11 +446,11 @@
                                     <action selector="TempButton1Press:" destination="nlY-IR-XTO" eventType="touchUpInside" id="DZA-Hk-NBF"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QQV-H8-bbg">
+                            <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QQV-H8-bbg">
                                 <rect key="frame" x="139" y="166" width="97" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -645,6 +647,6 @@
         <image name="RainAmsterdamTheNetherlands" width="1266" height="841.66668701171875"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4h1-kv-gOC"/>
+        <segue reference="RFW-h4-7jH"/>
     </inferredMetricsTieBreakers>
 </document>

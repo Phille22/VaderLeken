@@ -21,6 +21,7 @@
 		559A8D58224E0FD8000F5DE3 /* VaderLeken.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 559A8D56224E0FD8000F5DE3 /* VaderLeken.xcdatamodeld */; };
 		559A8D5A224E2753000F5DE3 /* ScoreBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559A8D59224E2753000F5DE3 /* ScoreBoardViewController.swift */; };
 		559A8D5C224E2AD3000F5DE3 /* ScoreBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559A8D5B224E2AD3000F5DE3 /* ScoreBoardTableViewCell.swift */; };
+		844E0E4B226484E2004CD014 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844E0E4A226484E2004CD014 /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		559A8D57224E0FD8000F5DE3 /* VaderLeken.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VaderLeken.xcdatamodel; sourceTree = "<group>"; };
 		559A8D59224E2753000F5DE3 /* ScoreBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardViewController.swift; sourceTree = "<group>"; };
 		559A8D5B224E2AD3000F5DE3 /* ScoreBoardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardTableViewCell.swift; sourceTree = "<group>"; };
+		844E0E4A226484E2004CD014 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				55629ED12230071200E48733 /* LaunchScreen.storyboard */,
 				55629ED42230071200E48733 /* Info.plist */,
 				559A8D56224E0FD8000F5DE3 /* VaderLeken.xcdatamodeld */,
+				844E0E4A226484E2004CD014 /* AboutViewController.swift */,
 			);
 			path = VaderLeken;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				55629ECB2230071100E48733 /* StartViewController.swift in Sources */,
 				559A8D58224E0FD8000F5DE3 /* VaderLeken.xcdatamodeld in Sources */,
 				55629EC92230071100E48733 /* AppDelegate.swift in Sources */,
+				844E0E4B226484E2004CD014 /* AboutViewController.swift in Sources */,
 				559A8D5C224E2AD3000F5DE3 /* ScoreBoardTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
