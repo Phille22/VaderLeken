@@ -2,8 +2,8 @@
 //  ScoreBoardViewController.swift
 //  VaderLeken
 //
-//  Created by user149351 on 2019-03-29.
-//  Copyright © 2019 STI. All rights reserved.
+//  Created by Phille on 2019-03-29.
+//  Copyright © 2019 Phille. All rights reserved.
 //
 
 import UIKit
@@ -21,7 +21,7 @@ class ScoreBoardViewController: UIViewController, NSFetchedResultsControllerDele
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //skicka rätt data att visa
+        //skicka rätt data att visa till tabellen
         if segue.identifier == "showResult"{
             if let resultPage = segue.destination as? EndViewController{
                 if let index = sender as? Int{
@@ -39,7 +39,7 @@ class ScoreBoardViewController: UIViewController, NSFetchedResultsControllerDele
         }
     }
     
-    //Ladda data
+    //Ladda data från Core Data
     override func viewWillAppear(_ animated: Bool) {
         let fetchRequest: NSFetchRequest<SaveDataCoreData> = SaveDataCoreData.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "points", ascending: false)

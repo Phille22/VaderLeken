@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="RainAmsterdamTheNetherlands" translatesAutoresizingMaskIntoConstraints="NO" id="LG1-bw-if5">
-                                <rect key="frame" x="-445.66666666666669" y="0.0" width="1266.3333333333333" height="1027"/>
+                                <rect key="frame" x="179.66666666666663" y="0.0" width="16" height="1027"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1027" id="485-Ij-8BY"/>
                                 </constraints>
@@ -136,8 +136,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V 0.9 Beta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tIg-gq-WnZ">
-                                <rect key="frame" x="148" y="527" width="79" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V 1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tIg-gq-WnZ">
+                                <rect key="frame" x="169" y="527" width="37" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="q67-3H-dVk"/>
                                 </constraints>
@@ -336,7 +336,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="RainAmsterdamTheNetherlands" translatesAutoresizingMaskIntoConstraints="NO" id="9Dn-1m-K7f">
-                                <rect key="frame" x="-445.66666666666669" y="0.0" width="1266.3333333333333" height="896"/>
+                                <rect key="frame" x="179.66666666666663" y="0.0" width="16" height="896"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1027" id="NIO-w6-dD3"/>
                                 </constraints>
@@ -647,6 +647,6 @@
         <image name="RainAmsterdamTheNetherlands" width="1266" height="841.66668701171875"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="RFW-h4-7jH"/>
+        <segue reference="4h1-kv-gOC"/>
     </inferredMetricsTieBreakers>
 </document>

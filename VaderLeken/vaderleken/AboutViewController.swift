@@ -2,8 +2,8 @@
 //  AboutViewController.swift
 //  VaderLeken
 //
-//  Created by admin on 4/15/19.
-//  Copyright © 2019 STI. All rights reserved.
+//  Created by Phille on 4/15/19.
+//  Copyright © 2019 Phille. All rights reserved.
 //
 
 import UIKit
@@ -14,7 +14,7 @@ class AboutViewController: UIViewController {
     
     @IBOutlet weak var licenceLinkButton: UIButton!
     override func viewWillAppear(_ animated: Bool) {
-        //Anpassa knapparnas storlek för att passa skärmstorlek
+        //Anpassar knapparnas storlek för att passa skärmstorlek
     imageLinkButton.titleLabel?.adjustsFontSizeToFitWidth = true
         licenceLinkButton.titleLabel?.adjustsFontSizeToFitWidth = true
     }

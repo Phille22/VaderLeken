@@ -2,14 +2,15 @@
 //  EasyGameViewController.swift
 //  VaderLeken
 //
-//  Created by user149351 on 2019-03-07.
-//  Copyright © 2019 STI. All rights reserved.
+//  Created by Phille on 2019-03-07.
+//  Copyright © 2019 Phille. All rights reserved.
 //
 
 import UIKit
 import MapKit
 import CoreData
 
+//Väderdatan
 struct ForecastResponse: Decodable{
     let timeSeries: [TimeSeries]
     
@@ -29,31 +30,32 @@ struct Values: Decodable{
 
 
 class EasyGameViewController: UIViewController {
-    var rightAnswer = 0
-    var numberOfAnswers = 0
-    var points = 0.0
-    var tempList: [Double] = []
-    var answerList: [String] = []
-    var cityList: [String] = []
-    var rightTempList: [Double] = []
-    var easyOrHard: Bool?
+    var rightAnswer = 0 //Hur många gånger användaren har svarat rätt
+    var numberOfAnswers = 0 //Hur många gånger användaren har gissat
+    var points = 0.0 //Antal poäng
+    var tempList: [Double] = [] //Tillfällig array med temperaturer för den plats som användaren gissar på, rensas efter varje svar
+    var answerList: [String] = [] //Användarens svar
+    var cityList: [String] = [] //Städerna som man gissar temperatuen på
+    var rightTempList: [Double] = [] //Rätt temperatur
+    var easyOrHard: Bool? //Lätt eller svår svårighetsgrad
     
-    @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var TempButton1: UIButton!
-    @IBOutlet weak var TempButton2: UIButton!
-    @IBOutlet weak var TempButton3: UIButton!
-    @IBOutlet weak var StationLabel: UILabel!
-    @IBOutlet weak var AnswerTextField: UITextField!
+    @IBOutlet weak var mapView: MKMapView! //Kartan
+    @IBOutlet weak var TempButton1: UIButton! //Temperaturknapp 1
+    @IBOutlet weak var TempButton2: UIButton! //Temperaturknapp 2
+    @IBOutlet weak var TempButton3: UIButton! //Temperaturknapp 3
+    @IBOutlet weak var StationLabel: UILabel! //Stadsnamnet
+    @IBOutlet weak var AnswerTextField: UITextField! //Rutan för att fylla i temperatur
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(points)
+        //Om man spelar på svår svårighetsgrad
         if easyOrHard == false{
             TempButton1.isHidden = true
             TempButton3.isHidden = true
             AnswerTextField.becomeFirstResponder()
         }else{
+            //Göm rutan för egen inmatning av temperatur om man spelar på lätt svårighetsgrad
          AnswerTextField.isHidden = true
         }
         let location = randomLocation()
@@ -71,13 +73,13 @@ class EasyGameViewController: UIViewController {
             points += 100 //100 poäng för rätt svar
             print(rightAnswer)
         }else{
-            points += 100 - (tempList[0] - Double("\(TempButton1.titleLabel?.text ?? "0")")!).magnitude
+            points += 10 - (tempList[0] - Double("\(TempButton1.titleLabel?.text ?? "0")")!).magnitude
             }
         numberOfAnswers += 1
         answerList.append((TempButton1.titleLabel?.text)!)
         tempList.removeAll()
         viewDidLoad()
-            if numberOfAnswers == 5{
+            if numberOfAnswers == 5{ //Sluta spelet efter fem spelade omgångar
                 performSegue(withIdentifier: "EndGame", sender: self)
             }
         }
@@ -91,7 +93,7 @@ class EasyGameViewController: UIViewController {
                     rightAnswer += 1
                     points += 200 //Dubbelt så mycket poäng för rätt svar än om man spelar på lätt svårighetsgrad
                 }else{
-                    points += 200 - (tempList[0] - Double("\(AnswerTextField.text ?? "0")")!).magnitude
+                    points += 20 - (tempList[0] - Double("\(AnswerTextField.text ?? "0")")!).magnitude
                 }
                 answerList.append((AnswerTextField?.text)!)
                 AnswerTextField.text = ""
@@ -101,7 +103,7 @@ class EasyGameViewController: UIViewController {
                     points += 100
                     print(rightAnswer)
                 }else{
-                    points += 100 - (tempList[0] - Double("\(TempButton2.titleLabel?.text ?? "0")")!).magnitude
+                    points += 10 - (tempList[0] - Double("\(TempButton2.titleLabel?.text ?? "0")")!).magnitude
                 }
                 answerList.append((TempButton2.titleLabel?.text)!)
             }
@@ -119,9 +121,8 @@ class EasyGameViewController: UIViewController {
         if TempButton3.titleLabel?.text == String(tempList[0]){
             rightAnswer += 1
             points += 100
-            print(rightAnswer)
         }else{
-            points += 100 - (tempList[0] - Double("\(TempButton3.titleLabel?.text ?? "0")")!).magnitude
+            points += 10 - (tempList[0] - Double("\(TempButton3.titleLabel?.text ?? "0")")!).magnitude
             }
         numberOfAnswers += 1
         answerList.append((TempButton3.titleLabel?.text)!)
@@ -142,7 +143,7 @@ class EasyGameViewController: UIViewController {
             endView.correctAnswers = rightAnswer
             endView.points = points.rounded()
             
-            //Spara datan
+            //Spara datan i Core Data
             if let appDelegate = (UIApplication.shared.delegate as? AppDelegate){
                 let saveData = SaveDataCoreData(context: appDelegate.persistentContainer.viewContext)
                 saveData.correctAnswers = Int16(rightAnswer)
@@ -198,10 +199,9 @@ class EasyGameViewController: UIViewController {
             }
             }.resume()
     }
-    //Hämta temperaturdata
+    //Hämta temperaturdata från väderdatan
     func getTemperature(with responseData: ForecastResponse) -> (Double, Double, Double){
         let realTemp = responseData.timeSeries[1].parameters[11].values[0]
-        print(realTemp)
         let randNumber = Double.random(in: (realTemp-10.0)...(realTemp+10.0)).rounded()
         let randNumber2 = Double.random(in: (realTemp-10.0)...(realTemp+10.0)).rounded()
         tempList.append(contentsOf: [realTemp, randNumber, randNumber2])
@@ -225,7 +225,7 @@ class EasyGameViewController: UIViewController {
         }
     }
     
-    //Kartan
+    // Visa kartan
     func displayMap(latitude: Double, longitude: Double, location: CLLocation){
         let regionRadius: CLLocationDistance = 500000
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)

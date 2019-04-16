@@ -2,8 +2,8 @@
 //  DifficultyViewController.swift
 //  VaderLeken
 //
-//  Created by user149351 on 2019-03-13.
-//  Copyright © 2019 STI. All rights reserved.
+//  Created by Phille on 2019-03-13.
+//  Copyright © 2019 Phille. All rights reserved.
 //
 
 import UIKit
@@ -18,8 +18,6 @@ class DifficultyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func EasyButtonPress(_ sender: Any) {
@@ -39,16 +37,4 @@ class DifficultyViewController: UIViewController {
             startGameView.easyOrHard = EasyOrHard
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
