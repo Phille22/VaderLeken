@@ -202,11 +202,13 @@ class EasyGameViewController: UIViewController {
     //Hämta temperaturdata från väderdatan
     func getTemperature(with responseData: ForecastResponse) -> (Double, Double, Double){
         let realTemp = responseData.timeSeries[1].parameters[11].values[0]
-        let randNumber = Double.random(in: (realTemp-10.0)...(realTemp+10.0)).rounded()
-        let randNumber2 = Double.random(in: (realTemp-10.0)...(realTemp+10.0)).rounded()
-        tempList.append(contentsOf: [realTemp, randNumber, randNumber2])
+        let randNumber = Double.random(in: (realTemp-10.0)...(realTemp+10.0))
+        let randNumber2 = Double.random(in: (realTemp-10.0)...(realTemp+10.0))
+        let roundedNumber = Double(round(10*randNumber)/10)
+        let roundedNumber2 = Double(round(10*randNumber2)/10)
+        tempList.append(contentsOf: [realTemp, roundedNumber, roundedNumber2])
         rightTempList.append(realTemp)
-        return(realTemp, randNumber, randNumber2)
+        return(realTemp, roundedNumber, roundedNumber2)
     }
     
     //Visa temperaturen på knapparna
